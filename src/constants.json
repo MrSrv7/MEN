@@ -1,0 +1,11 @@
+{
+  "server": {
+    "connected": "Server is running successfully"
+  },
+  "mongodb": {
+    "dbConnect": "MongoDB connection established successfully"
+  },
+  "error": {
+    "unexpected": "Unexpected error occured. Please try again later."
+  }
+}
