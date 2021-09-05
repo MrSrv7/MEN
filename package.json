@@ -1,0 +1,50 @@
+{
+  "name": "men",
+  "version": "1.0.0",
+  "description": "A MEN App which uses MongoDB for storage, ExpressJS for API Handling and NodeJS for running the App.",
+  "main": "src/server.js",
+  "repository": "https://github.com/MrSrv7/MEN",
+  "author": "MrSrv7",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "local:server": "cross-env NODE_ENV=local && nodemon --exec babel-node src/server.js",
+    "dev:server": "cross-env NODE_ENV=development && nodemon --exec babel-node src/server.js",
+    "format:check": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lint:check": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "**/*.{js}": [
+      "eslint"
+    ],
+    "**/*.{js,json}": [
+      "prettier --check"
+    ]
+  },
+  "keywords": [
+    "NodeJS, ExpressJS, MongoDB"
+  ],
+  "dependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/node": "^7.15.4",
+    "@babel/preset-env": "^7.15.4",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv-flow": "^3.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "husky": "^7.0.2",
+    "lint-staged": "^11.1.2",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.2"
+  }
+}
