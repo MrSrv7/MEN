@@ -1,11 +1,22 @@
 {
   "server": {
-    "connected": "Server is running successfully"
+    "connected": "Server is running successfully",
+    "error": {
+      "unexpected": "Unexpected error occured. Please try again later.",
+      "requiredFieldMissing": "Please fill in the required fields",
+      "invalidCredentials": "Invalid credentials. Please try again."
+    }
   },
-  "mongodb": {
-    "dbConnect": "MongoDB connection established successfully"
+  "db": {
+    "dbConnect": "MongoDB connection established successfully",
+    "user": {
+      "regUser": "User registered successfully",
+      "loginUser": "User login successful",
+      "noUser": "User not found",
+      "userAlreadyExists": "User with the same email already exists"
+    }
   },
-  "error": {
-    "unexpected": "Unexpected error occured. Please try again later."
+  "auth": {
+    "expiresIn": "1h"
   }
 }
