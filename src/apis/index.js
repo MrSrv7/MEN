@@ -16,6 +16,10 @@ const swaggerConfig = {
       url: "http://localhost:6116",
       description: process.env.DESCRIPTION,
     },
+    {
+      url: "https://dry-brook-62770.herokuapp.com",
+      description: process.env.DESCRIPTION,
+    },
   ],
   paths: { ...userApiObject },
 };
