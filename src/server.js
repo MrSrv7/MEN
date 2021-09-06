@@ -32,7 +32,7 @@ mongoose.connect(
   (err, db) => {
     //eslint-disable-next-line no-console
     if (db) console.log(constants.db.dbConnect);
-    else throw new Error(constants.error.unexpected, { cause: err });
+    else throw new Error(constants.server.error.unexpected, { cause: err });
   }
 );
 
