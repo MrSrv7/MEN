@@ -1,16 +1,20 @@
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
-import { config } from "dotenv-flow";
+import swaggerUi from "swagger-ui-express";
 import constants from "./constants.json";
-
-config();
+import swaggerDoc from "./apis";
+import userRouter from "./routes/userRoute";
 
 const app = express();
 
-const DB = process.env.DB;
+const URI = process.env.URI;
 const PORT = process.env.PORT;
 
+app.use("/", swaggerUi.serve);
+app.get("/", swaggerUi.setup(swaggerDoc, { explorer: true }));
+
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors());
 
@@ -20,18 +24,16 @@ app.listen(PORT, () => {
 });
 
 mongoose.connect(
-  DB,
+  URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   },
   (err, db) => {
     //eslint-disable-next-line no-console
-    if (db) console.log(constants.mongodb.dbConnect);
+    if (db) console.log(constants.db.dbConnect);
     else throw new Error(constants.error.unexpected, { cause: err });
   }
 );
 
-app.use("/get", (err, db) => {
-  db.json({ msg: "check" });
-});
+app.use("/user", userRouter);
