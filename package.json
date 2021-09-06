@@ -10,7 +10,6 @@
   "scripts": {
     "local:server": "cross-env NODE_ENV=local nodemon --exec babel-node src/server.js",
     "dev:server": "cross-env NODE_ENV=development nodemon --exec babel-node src/server.js",
-    "start:server": "nodemon --exec babel-node src/server.js",
     "format:check": "prettier --check .",
     "format:fix": "prettier --write .",
     "lint:check": "eslint .",
