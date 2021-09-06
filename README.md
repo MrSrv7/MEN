@@ -50,4 +50,6 @@ The following `scripts` can be run within the root directory of the app.
 
 6. `npm run format:check` or `yarn format:check` : is used to check if the styling of all files matches with the `.prettierrc` config.
 
-7. `npm run prepare` or `yarn prepare` : is used to run the `husky` app which is used to prevent commits if it may contain any `eslint` errors or `prettier` stylings.
+7. `npm run format:fix` or `yarn format:fix` : is used to fix if the styling of any/all file(s) doesn't matches the `.prettierrc` config.
+
+7. `npm run prepare` or `yarn prepare` : is used to run the `husky` app which is used to prevent commits if it may contain any `eslint` linting errors or `prettier` styling error.
