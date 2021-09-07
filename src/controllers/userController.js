@@ -13,10 +13,16 @@ export const registerUser = async (req, res) => {
         .json({ error: constants.server.error.requiredFieldMissing });
 
     const existingUser = await UserModel.findOne({ email: email });
+
     if (existingUser)
       return res
         .status(409)
         .json({ error: constants.db.user.userAlreadyExists });
+
+    const totalUser = await UserModel.find();
+
+    if (process.env.ENV === "DEVELOPMENT" && totalUser.length > 4)
+      return res.status(403).json({ error: constants.db.limit });
 
     const salt = await genSalt();
     const passwordHash = await hash(password, salt);
