@@ -9,6 +9,7 @@
   },
   "db": {
     "dbConnect": "MongoDB connection established successfully",
+    "limit": "New User Limit reached. Please use example values for logging in.",
     "user": {
       "regUser": "User registered successfully",
       "loginUser": "User login successful",
