@@ -118,7 +118,8 @@ const userApiArr = [
     respondWith: {
       post: {
         tags: ["User"],
-        description: "Logs n a User",
+        description:
+          "Logs in the User (For Admin credentials, use email : admin@example.com, password : 1234567)",
 
         requestBody: {
           content: {
