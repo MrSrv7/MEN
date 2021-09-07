@@ -9,8 +9,11 @@ This App is deployed to Heroku. If you also need to deploy in heroku you can do 
 ### Commands
 
 `heroku create` - this command creates a server instance in your heroku account.
+
 `git push heroku master` - this command pushes the code from the git repository to heroku's app repository.
+
 `heroku ps:scale web=1` - this command scales the web server.
+
 `heroku open` - this command opens the app instance in default browser.
 
 ## All the Environmental files will be ignored by default in Heroku. Visit the app settings page and define the environmental values in Config Vars section
