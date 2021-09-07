@@ -20,10 +20,9 @@ export const registerUser = async (req, res) => {
         .json({ error: constants.db.user.userAlreadyExists });
 
     const totalUser = await UserModel.find();
-
-    if (process.env.ENV === "DEVELOPMENT" && totalUser.length > 4)
+    if (process.env.ENV === "DEVELOPMENT" && totalUser.length > 4) {
       return res.status(403).json({ error: constants.db.limit });
-
+    }
     const salt = await genSalt();
     const passwordHash = await hash(password, salt);
 
