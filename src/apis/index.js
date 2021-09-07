@@ -17,7 +17,7 @@ const swaggerConfig = {
       description: process.env.DESCRIPTION,
     },
     {
-      url: "https://dry-brook-62770.herokuapp.com",
+      url: "https://infinite-beach-26300.herokuapp.com",
       description: process.env.DESCRIPTION,
     },
   ],
