@@ -1,6 +1,6 @@
 # MEN
 
-(## Please give it a star if this was/is helpful to you)
+## (Please give this a star if this was/is helpful to you. Which might motivate me to do more like this :) )
 
 A StandAlone NodeJS Server Backend app which is connected to MongoDB via Express JS, that responds to API (REST API) requests and perform Authentication checks (if neccessary) with JWT tokens. You can use this as a dedicated Server backend for whatever front-end framework you using (like ReactJS, VueJS, even Vanilla JS). This is a NodeJS Server app connected with MongoDB for saving, manipulating and maintaining the data. The APIs are interactively served at the root level by Swagger. All the APIs can be interactively explored through the Swagger UI.
 
