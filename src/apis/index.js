@@ -13,12 +13,12 @@ const swaggerConfig = {
   },
   servers: [
     {
-      url: "http://localhost:6116",
-      description: process.env.DESCRIPTION,
+      url: process.env.URL,
+      description: "Local Server",
     },
     {
       url: "https://infinite-beach-26300.herokuapp.com",
-      description: process.env.DESCRIPTION,
+      description: "Development Server",
     },
   ],
   paths: { ...userApiObject },
